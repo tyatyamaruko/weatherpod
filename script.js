@@ -4,7 +4,7 @@ let baseURL = "https://weather.tsukumijima.net/api/forecast/city/"
 
 let prefCodes = {
     1: "017010",
-    2: "021000",
+    2: "020010",
     3: "030010",
     4: "040010",
     5: "050010",
