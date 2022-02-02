@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <title>Weather Pod</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: skyblue;
+        padding: 10px;
+      }
+
+      header h1 {
+        text-align: center;
+        color: #fff;
+      }
+      #map {
+        margin-top: 30px;
+      }
+      #map canvas {
+        border: none !important;
+      }
+
+      .modal-back {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        display: none;
+      }
+
+      #modal-view {
+        background: #fff;
+        width: 80%;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 30px 20px;
+      }
+
+      .today {
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .date-label {
+        text-align: center;
+      }
+
+      .weather-img {
+        width: 50%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Weather Pod</h1>
+    </header>
+    <main>
+      <div id="map"></div>
+      <!-- /#map -->
+      <div class="modal-back">
+        <div id="modal-view">
+          <div class="today">
+            <h2 class="pref-name"></h2>
+            <!-- /.pref-name -->
+            <h3 class="date-label"></h3>
+            <!-- /.date-label -->
+            <img src="" alt="" class="weather-img" />
+            <div class="temp">
+              <p class="min"></p>
+              <!-- /.min -->
+              <p class="max"></p>
+              <!-- /.max -->
+            </div>
+            <!-- /.temp -->
+          </div>
+          <!-- /.today -->
+        </div>
+        <!-- /#modal-view -->
+      </div>
+      <!-- /.modal-back -->
+    </main>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/japan-map-js@1.0.1/dist/jpmap.min.js"
+    ></script>
+    <script type="text/javascript" src="dist/jpmap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
